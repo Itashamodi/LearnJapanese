@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fde3e3; /* Light pink background */
+    color: #333; /* Dark text color */
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #bf3684; /* Cherry blossom color for headings */
+}
+
+h2 {
+    border-bottom: 2px solid #bf3684; /* Cherry blossom border for subheadings */
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+em {
+    color: #bf3684; /* Cherry blossom color for emphasized text */
+}
+
+a {
+    color: #ff7878; /* Bright pink for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Animation classes */
+@keyframes blinkColor {
+    0% {
+        background-color: #ff7878; /* Initial color */
+    }
+    50% {
+        background-color: #fff; /* Intermediate color */
+    }
+    100% {
+        background-color: #ff7878; /* Final color */
+    }
+}
+
+/* Apply blinking color animation to elements */
+.blinking-color {
+    animation: blinkColor 1s infinite; /* Change '1s' to adjust the animation duration */
+}
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Apply animations to elements */
+.animate-rotate {
+    animation: rotate 2s linear infinite;
+}
+
+.animate-bounce {
+    animation: bounce 1s ease-in-out;
+}
+
+/* Animation classes for falling cherry blossoms */
+/* Animation classes for falling cherry blossoms */
+@keyframes fallAnimation {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+/* Apply falling cherry blossoms animation to elements */
+.falling-cherry-blossoms {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    animation: fallAnimation 5s linear infinite;
+}
+
+/* Style for the cherry blossom */
+.cherry-blossom {
+    width: 20px;
+    height: 20px;
+    background-color: #ffebf0;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(255, 0, 102, 0.8);
+}
+
+/* Multiple cherry blossoms with different positions and animation delays */
+.cherry-blossom:nth-child(1) {
+    left: 10%;
+    animation-delay: 0.5s;
+}
+
+.cherry-blossom:nth-child(2) {
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.cherry-blossom:nth-child(3) {
+    left: 50%;
+    animation-delay: 1.5s;
+}
+
+.cherry-blossom:nth-child(4) {
+    left: 70%;
+}
